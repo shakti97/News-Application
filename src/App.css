@@ -1,38 +1,32 @@
-.App {
+* {
+  margin: 0;
+}
+
+/* Category */
+.category__filter div {
+  padding: 2% 0%;
   text-align: center;
+  font-weight: bold;
+  flex-grow: 1;
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+.category__filter .active {
+  border-bottom: 5px solid rgb(48, 48, 173);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Card */
+.newsCard .card-img-top {
+  height: 200px;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Pagination */
+.pointer {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* color */
+.grey {
+  color: #bdbbbb;
 }
