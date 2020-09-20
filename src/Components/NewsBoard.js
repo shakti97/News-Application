@@ -82,12 +82,18 @@ function NewsBoard() {
     setSearching(true);
     let url = `${Constant.BASE_URL}&category=${category}&page=${page}`;
     try {
-      let response = await Axios.get(url);
-      if (response.Error) {
+      let response = await Axios.get(url, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+          "Access-Control-Allow-Headers": "*",
+        },
+      });
+      if (response.data.status === "error") {
+        alert(response.data.message);
         return;
       }
       let articles = modifyArticle(response.data.articles);
-      console.log(articles);
       setNewsList(articles);
       setSearching(false);
     } catch (err) {
